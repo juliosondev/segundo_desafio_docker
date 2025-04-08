@@ -6,7 +6,7 @@ services:
       context: ./node 
     container_name: app
     ##COMANDO PARA ESPERAR A BD
-    # entrypoint: dockerize -wait tcp://db:3306 -timeout 30s docker-entrypoint.sh
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
     networks:
       - segnodenetwork
     volumes:
